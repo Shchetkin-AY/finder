@@ -1,0 +1,7 @@
+$component-name: "g-list";
+
+.#{$component-name} {
+  padding-left: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+}

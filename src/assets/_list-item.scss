@@ -1,0 +1,63 @@
+$size: 36px;
+
+$component-name: "g-list-item";
+
+.#{$component-name} {
+  @include absolute-height($size);
+  @include absolute-width(100%);
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-content: center;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  &__prefix {
+    @include absolute-height($size);
+    @include absolute-width($size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__label {
+    @include absolute-height($size);
+    
+    display: grid;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  &:not(.#{$component-name}--prefix) {
+    .#{$component-name}__label {
+      padding-left: $size;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  &--prefix {
+    grid-template-columns: auto 1fr;
+  }
+
+  &--active {
+    .#{$component-name}__label,
+    .#{$component-name}__prefix {
+      color: rgb(30,144,255) !important
+    }
+  }
+
+  &--node {
+    // style fore node
+  }
+}
