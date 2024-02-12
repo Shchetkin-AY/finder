@@ -71,8 +71,8 @@ function renderListItem(h) {
       class: {
         [`${className}`]: true,
         [`${className}--node`]: this.isNode,
-        [`${className}--prefix`]: !!this.value.node,
-        [`${className}--active`]: !!this.value.node && !!this.showList
+        [`${className}--prefix`]: this.isNode,
+        [`${className}--active`]: this.isNode && !!this.showList
       },
       key: this.value.id,
       on: {

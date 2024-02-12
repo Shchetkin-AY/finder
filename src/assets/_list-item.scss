@@ -15,6 +15,14 @@ $component-name: "g-list-item";
 
   cursor: pointer;
 
+  &__holder {
+    @include absolute-height($size);
+    @include absolute-width(100%);
+
+    display: grid;
+    
+  }
+
   &__prefix {
     @include absolute-height($size);
     @include absolute-width($size);

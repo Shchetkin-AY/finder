@@ -1,7 +1,20 @@
 $component-name: "g-list";
 
 .#{$component-name} {
-  padding-left: 16px;
   display: grid;
   grid-template-columns: 1fr;
+
+  & > div {
+    > .g-list-item {
+      padding-left: 12px;
+      
+      & + .#{$component-name} {
+        & > div {
+          > .g-list-item {
+            padding-left: 24px;
+          }
+        }
+      }
+    }
+  }
 }
